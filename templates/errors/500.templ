@@ -1,0 +1,17 @@
+package templates 
+
+import common "github.com/Olivia-Newberry/go-tabletop-companion-app/templates/common"
+
+templ ServerError(title string, stackTrace string) {
+	@common.Page(title) {
+		<section>
+			@serverError(stackTrace)
+		</section>
+	}
+}
+
+templ serverError(st string) {
+	<div>
+		{ st }
+	</div>
+}

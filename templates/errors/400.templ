@@ -1,0 +1,17 @@
+package templates 
+
+import common "github.com/Olivia-Newberry/go-tabletop-companion-app/templates/common"
+
+templ ValidationError(title string, message string) {
+	@common.Page(title) {
+		<section>
+			@validationError(message)
+		</section>
+	}
+}
+
+templ validationError(msg string) {
+	<div>
+		{ msg }
+	</div>
+}

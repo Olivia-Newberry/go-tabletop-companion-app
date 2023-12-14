@@ -1,0 +1,17 @@
+package templates 
+
+import common "github.com/Olivia-Newberry/go-tabletop-companion-app/templates/common"
+
+templ NotFoundError(title string, message string) {
+	@common.Page(title) {
+		<section>
+			@validationError(message)
+		</section>
+	}
+}
+
+templ notFoundError(msg string) {
+	<div>
+		{ msg }
+	</div>
+}
