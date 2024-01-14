@@ -29,6 +29,23 @@ Created with Go, HTMX, echo, templ & tailwindcss
     go get github.com/jmoiron/sqlx@latest
    ```
 
+4. MinGW
+    Windows
+
+    ```sh
+    choco install mingw
+    ```
+
+    If you don't have choco, install it from [here](https://chocolatey.org/install)
+
+    Linux
+
+    You could install build-essential package
+
+    ```sh
+    sudo apt-get install build-essential
+    ```
+
 ## Setup
 
 1. Set environment variables

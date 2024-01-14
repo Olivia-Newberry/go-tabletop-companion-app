@@ -2,6 +2,9 @@ package app
 
 import (
 	"log"
+	"os"
+
+	"github.com/joho/godotenv"
 
 	"github.com/Olivia-Newberry/go-tabletop-companion-app/database"
 	"github.com/Olivia-Newberry/go-tabletop-companion-app/handlers"
@@ -16,6 +19,16 @@ func HTML(c echo.Context, comp templ.Component) error {
 }
 
 func Start() {
+	err := godotenv.Load()
+	if err != nil {
+	log.Fatal("Error loading .env file")
+	}
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("PORT is not set in .env file")
+	}
+
 	router := echo.New()
 
 	router.Static("/static", "static")
@@ -31,5 +44,5 @@ func Start() {
 
 	log.Println("database is setup")
 
-    router.Logger.Fatal(router.Start(":1323"))
+	router.Logger.Fatal(router.Start(":" + port))
 }
