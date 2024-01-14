@@ -30,3 +30,6 @@ sqlite.db
 
 # env files
 *.env*
+
+# build file
+go-tabletop-companion-app
