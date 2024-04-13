@@ -33,3 +33,6 @@ sqlite.db
 
 # compiled templates
 *.templ.go
+
+# build file
+go-tabletop-companion-app
