@@ -29,6 +29,9 @@ jobs:
         go get github.com/jmoiron/sqlx@latest
         go env -w CGO_ENABLED=1
 
+    - name: Create templates
+      run: templ generate
+
     - name: Build
       run: go build -v ./...
 
