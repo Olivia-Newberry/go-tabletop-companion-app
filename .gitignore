@@ -31,5 +31,8 @@ sqlite.db
 # env files
 *.env*
 
+# compiled templates
+*.templ.go
+
 # build file
 go-tabletop-companion-app
